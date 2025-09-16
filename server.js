@@ -16,6 +16,9 @@ import aboutRoutes from "./routes/aboutRoutes.js";
 import serviceRoutes from "./routes/serviceRoutes.js";
 import contactRoutes from "./routes/contactRoutes.js";
 import careerRoutes from "./routes/careerRoutes.js";
+import dashboardRoutes from "./routes/dashboardRoutes.js";
+import paymentRoutes from "./routes/payment.js";
+import webinarRoutes from "./routes/webinar.js";
 
 const app = express();
 
@@ -47,6 +50,9 @@ app.use("/api/about", aboutRoutes);
 app.use("/api/services", serviceRoutes);
 app.use("/api/contact-messages", contactRoutes);
 app.use("/api/careers", careerRoutes);
+app.use("/api/dashboard", dashboardRoutes);
+app.use("/payment", paymentRoutes);
+app.use("/api/webinars", webinarRoutes);
 
 // Default route
 app.get("/", (req, res) => {

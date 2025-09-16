@@ -16,37 +16,6 @@ const eventSchema = new Schema(
 
 const servicesSchema = new Schema(
   {
-    webinars: {
-      list: [
-        {
-          title: String,
-          speaker: String,
-          date: String,
-          time: String,
-          timezone: String,
-          duration: Number,
-          registered: Number,
-          live: Boolean,
-          category: String,
-          rating: Number,
-          featured: Boolean,
-          description: String,
-          speakerBio: String,
-          learningPoints: [String],
-          audience: [String],
-        },
-      ],
-      features: [
-        {
-          icon: String,
-          text: String,
-        },
-      ],
-      stats: {
-        webinarsConducted: Number,
-        learnersServed: Number,
-      },
-    },
     manthan: {
       hero: {
         title: String,

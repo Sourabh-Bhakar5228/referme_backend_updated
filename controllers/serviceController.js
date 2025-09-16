@@ -12,21 +12,6 @@ export const getServices = async (req, res) => {
   }
 };
 
-export const upsertWebinars = async (req, res) => {
-  try {
-    const doc = await Service.findOneAndUpdate(
-      {},
-      { webinars: req.body },
-      { upsert: true, new: true }
-    );
-    res.json(doc.webinars);
-  } catch (e) {
-    res
-      .status(400)
-      .json({ error: "Failed to save webinars", details: e.message });
-  }
-};
-
 export const upsertManthan = async (req, res) => {
   try {
     const doc = await Service.findOneAndUpdate(
